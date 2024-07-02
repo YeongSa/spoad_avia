@@ -1,0 +1,177 @@
+.documentsPage {
+  width: 1440px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  margin-top: 60px;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.sidebarContainer {
+  flex: 1;
+}
+
+.sidebar {
+  width: 340px;
+  margin: auto;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar nav {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.25);
+  padding: 4px 12px;
+}
+
+.searchBar {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.searchBar input {
+  width: 260px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 4px solid var(--accent-dark);
+  padding: 0 8px;
+  font-weight: 500;
+}
+
+.searchBar button {
+  border: none;
+  background-color: var(--accent-dark);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navMain {
+  padding: 20px 12px;
+}
+
+.navMain ul {
+  margin-bottom: 8px;
+}
+
+.navMain li {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-left: 24px;
+  margin-bottom: 12px;
+  padding: 6px 0;
+  list-style: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.navMain li:hover .dot {
+  opacity: 1;
+}
+
+.navMain .dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-dark);
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.navMain .headingLi {
+  color: var(--accent-dark);
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.documentsContainer {
+  flex: 2;
+}
+
+.documents {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (max-width: 430px) {
+  .documentsPage {
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 24px;
+    background-color: #fff;
+  }
+
+  .sidebarContainer {
+    flex: none;
+    width: 100%;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: 224px;
+  }
+
+  .sidebar nav {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .searchBar {
+    width: 260px;
+    height: 34px;
+    margin: auto;
+    margin-top: 12px;
+    padding-bottom: 8px;
+  }
+
+  .searchBar input {
+    width: 80%;
+    height: 100%;
+    border-width: 3px;
+  }
+
+  .searchBar button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navMain {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .navMain li {
+    margin-bottom: 8px;
+    padding: 2px 0;
+  }
+
+  .documentsContainer {
+    height: calc(100vh - 224px - 48px - 104px);
+    background-color: var(--bg-main);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+  }
+
+  .documents {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+  }
+}

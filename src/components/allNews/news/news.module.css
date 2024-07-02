@@ -1,0 +1,91 @@
+.news {
+  position: relative;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.news:hover {
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.alert {
+  background-color: var(--notice-color);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 2px 6px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.theme {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  padding: 2px 12px;
+  background-color: rgba(9, 46, 102, 0.9);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.container {
+  margin-top: 24px;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "date dateFull";
+  padding: 12px 16px;
+}
+
+.title {
+  grid-area: title;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.date {
+  grid-area: date;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.dateFull {
+  grid-area: dateFull;
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width: 430px) {
+  .news {
+    max-width: 280px;
+    margin: auto;
+  }
+  .alert {
+    font-size: 8px;
+  }
+
+  .theme {
+    top: -8px;
+    font-size: 10px;
+  }
+
+  .container {
+    padding: 20px 12px 8px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .date,
+  .dateFull {
+    font-size: 10px;
+  }
+}

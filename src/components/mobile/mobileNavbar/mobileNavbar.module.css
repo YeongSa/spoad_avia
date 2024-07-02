@@ -1,0 +1,68 @@
+.mobileNavbar {
+  display: none;
+}
+
+@media screen and (max-width: 430px) {
+  .mobileNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 44px;
+    z-index: 4;
+    box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .container {
+    width: 330px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 10px;
+  }
+
+  .navItem {
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .navItem:visited {
+    color: var(--bg-light);
+  }
+
+  .icon {
+    height: calc(100% - 12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon path {
+    fill: #666;
+  }
+
+  .navItem.active .icon path {
+    fill: var(--bg-light);
+  }
+
+  .name {
+    height: 12px;
+    color: #666;
+    transition: 0.3s ease;
+  }
+
+  .navItem.active .name {
+    color: var(--bg-light);
+    font-weight: 500;
+  }
+}

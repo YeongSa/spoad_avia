@@ -1,0 +1,148 @@
+.discount {
+  z-index: 2;
+  width: 260px;
+  height: 360px;
+  cursor: pointer;
+  position: relative;
+  background-color: #efefef;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  transition: 0.4s ease;
+}
+
+.discount:hover {
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
+}
+
+.upper {
+  width: 100%;
+  height: 50%;
+  padding-top: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.logo {
+  width: 180px;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imgContainer {
+  width: 160px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer img {
+  border-radius: 8px;
+}
+
+.middle {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.date {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 8px 0;
+  border-bottom: 2px solid var(--accent-dark);
+}
+
+.percent {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: green;
+}
+
+.lower {
+  width: 100%;
+  height: 50%;
+  background-color: #efefef;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+@media screen and (max-width: 430px) {
+  .discount {
+    width: 100%;
+    min-width: 150px;
+    height: 223px;
+    border-radius: 8px;
+  }
+
+  .upper {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .logo {
+    width: 80%;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgContainer {
+    width: 90%;
+    height: 90%;
+  }
+
+  .imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .middle {
+    width: 124px;
+    height: 128px;
+    border-radius: 4px;
+  }
+
+  .name {
+    max-width: 90%;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+
+  .date {
+    font-size: 12px;
+    padding: 2px 0px;
+    border-bottom-width: 1px;
+  }
+
+  .percent {
+    font-size: 18px;
+  }
+}

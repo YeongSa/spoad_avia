@@ -1,0 +1,369 @@
+.discountsPage {
+  width: 1400px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 24px;
+  display: flex;
+  gap: 68px;
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  margin-top: 60px;
+}
+
+.cards {
+  position: relative;
+  width: 320px;
+  height: 200px;
+}
+
+.card {
+  position: absolute;
+  width: 220px;
+  height: 140px;
+}
+
+.card.front {
+  rotate: -5deg;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 1));
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+  z-index: 2;
+}
+
+.card.back {
+  rotate: 50deg;
+  scale: 0.8;
+  z-index: 1;
+  left: 120px;
+  top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+}
+
+.card img {
+  border-radius: 20px;
+}
+
+.logo {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.logo .left {
+  text-align: center;
+}
+
+.left .top {
+  font-size: 14px;
+}
+
+.left .bottom {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.right .top {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.right .bottom {
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.decoration {
+  width: 6px;
+  height: 90%;
+  margin: 0 8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 0 8px 3px #ccc;
+}
+
+.decoration div {
+  flex: 1;
+}
+
+.decoration .white {
+  background-color: #fff;
+}
+
+.decoration .blue {
+  background-color: blue;
+}
+
+.decoration .red {
+  background-color: red;
+}
+
+.categories {
+  position: sticky;
+  top: 160px;
+  width: 260px;
+  height: fit-content;
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.categories .title {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-light);
+  color: #fff;
+  gap: 16px;
+}
+
+.categories .title svg {
+  display: none;
+}
+
+.categories .title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.categories .container {
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: center;
+  gap: 8px;
+}
+
+.categorie {
+  width: 240px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 12px;
+  background-color: var(--bg-light);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.selector {
+  grid-area: selector;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.selector .active {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #375582;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.categorie:hover .selector .active {
+  opacity: 50%;
+}
+
+.categorie.active .selector {
+  border: 2px solid #375582;
+}
+
+.categorie.active .selector .active {
+  opacity: 100%;
+}
+
+.allDiscounts {
+  width: 1000px;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--bg-light);
+}
+
+.discounts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+@media screen and (max-width: 430px) {
+  .discountsPage {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+    background-color: #fff;
+  }
+
+  .leftSection {
+    width: 100%;
+    height: 80px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .categories {
+    position: relative;
+    top: 0;
+    width: 180px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .categories .title {
+    height: 34px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+
+  .categories .title h2 {
+    font-size: 16px;
+  }
+
+  .categories .title svg {
+    display: block;
+    width: 14px;
+    height: 12px;
+  }
+
+  .categories .container {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    top: calc(100% + 12px);
+    position: absolute;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .categories .container.open {
+    height: fit-content;
+    padding: 8px 0;
+    z-index: 4;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+  }
+
+  .categorie {
+    width: 90%;
+    height: 28px;
+    margin: auto;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+
+  .selector {
+    width: 12px;
+    height: 12px;
+  }
+
+  .selector .active {
+    width: 8px;
+    height: 8px;
+  }
+
+  .categorie.active .selector {
+    border: none;
+  }
+
+  .icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .allDiscounts {
+    width: 100%;
+    height: calc(100vh - 80px - 44px - 60px - 24px);
+    padding: 16px 12px;
+    margin-top: 0;
+    gap: 20px;
+    background-color: #efefef;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+  }
+
+  .veil {
+    position: fixed;
+    top: 184px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 3;
+  }
+
+  .allDiscounts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .allDiscounts {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .heading {
+    border: none;
+    padding: 0;
+  }
+
+  .logo {
+    scale: 0.8;
+  }
+
+  .cards {
+    display: none;
+  }
+
+  .discounts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,44 @@
+.freshNewsMobile {
+  display: none;
+}
+
+@media screen and (max-width: 430px) {
+  .freshNewsMobile {
+    display: block;
+    width: 100%;
+    padding: 36px 0;
+    color: #fff;
+    background-color: #222;
+  }
+
+  .freshNewsMobile h2 {
+    font-size: 16px;
+    margin-left: 36px;
+  }
+
+  .wrapper {
+    margin-top: 16px;
+    position: relative;
+    height: 230px;
+    width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .container {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 40px;
+  }
+}
