@@ -2,7 +2,7 @@
 
 .contacts {
   width: 1400px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   padding: 12px;
   display: flex;
@@ -199,6 +199,7 @@
 
   .map {
     margin-top: 24px;
+    flex: none;
   }
 
   .adress {
@@ -210,4 +211,6 @@
     height: 100%;
     box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.5);
   }
+
+
 }

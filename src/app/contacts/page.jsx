@@ -93,6 +93,7 @@ const Contacts = () => {
             src="https://yandex.ru/map-widget/v1/?ll=73.409242%2C61.340178&mode=whatshere&whatshere%5Bpoint%5D=73.406625%2C61.340287&whatshere%5Bzoom%5D=17&z=18.27"
             frameBorder="0"
             allowFullScreen="1"
+            autoFitToViewport= 'always'
           ></iframe>
         </div>
       </div>
